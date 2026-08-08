@@ -3,7 +3,7 @@ import { db, type Task } from '../../db/db';
 import { todayISODate, nowISO, addDaysISO } from '../../shared/lib/date';
 import { pointsForTaskSize } from '../gamification/pointsEngine';
 import { isTaskDoneToday } from './recurrence';
-import { requestNotificationPermission } from '../notifications/notificationApi';
+import { requestPermissionAndSubscribe } from '../notifications/pushClient';
 import type { NewTaskInput } from './types';
 
 export async function addTask(input: NewTaskInput): Promise<Task> {
@@ -73,8 +73,8 @@ export async function completeTask(taskId: string) {
   });
 
   // Ask for notification permission after the first real win, not on cold
-  // load — silently no-ops on iOS (unsupported) or if already decided.
-  requestNotificationPermission();
+  // load — silently no-ops if unsupported or already decided.
+  requestPermissionAndSubscribe();
 }
 
 export async function uncompleteTask(taskId: string) {

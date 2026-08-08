@@ -4,11 +4,8 @@ import { db } from '../../../db/db';
 import { Button } from '../../../shared/ui/Button';
 import { Card } from '../../../shared/ui/Card';
 import { exportBackup, importBackup } from '../backupService';
-import {
-  isNotificationSupported,
-  hasNotificationPermission,
-  requestNotificationPermission,
-} from '../../notifications/notificationApi';
+import { isNotificationSupported, hasNotificationPermission } from '../../notifications/notificationApi';
+import { requestPermissionAndSubscribe } from '../../notifications/pushClient';
 
 export function SettingsScreen() {
   const settings = useLiveQuery(() => db.settings.get('singleton'), []);
@@ -65,9 +62,10 @@ export function SettingsScreen() {
       {isNotificationSupported() && !hasNotificationPermission() && (
         <Card className="bg-surface-soft">
           <p className="mb-2 text-sm text-ink-soft">
-            Activa notificaciones para recordatorios extra (funciona mejor en Android).
+            actívalas y te aviso aunque tengas la app cerrada — en iPhone solo funciona si ya la
+            instalaste en tu pantalla de inicio
           </p>
-          <Button size="sm" variant="secondary" onClick={requestNotificationPermission}>
+          <Button size="sm" variant="secondary" onClick={requestPermissionAndSubscribe}>
             Activar notificaciones
           </Button>
         </Card>

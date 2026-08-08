@@ -77,6 +77,7 @@ export interface AppSettings {
   lastBackupAt?: string;
   streakGraceUsedWeek?: string; // ISO week key, e.g. "2026-W32"
   playlistOverrides?: Partial<Record<PlaylistMood, string>>;
+  lastWheelSpinDate?: string; // ISO date, one spin allowed per day
 }
 
 const db = new Dexie('chiwawapp') as Dexie & {

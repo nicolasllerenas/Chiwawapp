@@ -1,0 +1,19 @@
+name = "chiwawapp-push"
+main = "src/index.ts"
+compatibility_date = "2026-08-08"
+compatibility_flags = ["nodejs_compat"]
+
+# One check-in a day, 7pm Peru time (UTC-5, no DST) = 00:00 UTC.
+[triggers]
+crons = ["0 0 * * *"]
+
+[[kv_namespaces]]
+binding = "CHIWAWAPP_KV"
+id = "9c272b4a112546cca22f9a492b3e2a35"
+
+# Public by design — VAPID public key is meant to be shared with clients.
+# VAPID_PRIVATE_KEY and SHARED_SECRET are set via `wrangler secret put`,
+# never committed here.
+[vars]
+VAPID_SUBJECT = "mailto:nicolas.llerena2909@gmail.com"
+VAPID_PUBLIC_KEY = "BE41F8HNqvnTpAxTh-iu-FTByg2RIZKbVQOTKwTrgcPjS4kH6jW0LCHXe3kw0pdOg7LdEpDS54HOZditjS6Gcx0"

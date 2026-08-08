@@ -11,6 +11,7 @@ import { FocusScreen } from './features/focus-session/FocusScreen';
 import { RewardsScreen } from './features/gamification/RewardsScreen';
 import { MusicScreen } from './features/music/MusicScreen';
 import { ReminderBanner } from './features/notifications/components/ReminderBanner';
+import { PushSync } from './features/notifications/components/PushSync';
 import { OnboardingFlow } from './features/settings/components/OnboardingFlow';
 import { SettingsScreen } from './features/settings/components/SettingsScreen';
 
@@ -54,6 +55,7 @@ function App() {
       <Modal open={activeModal === 'settings'} onClose={closeModal}>
         <SettingsScreen />
       </Modal>
+      <PushSync />
     </div>
   );
 }

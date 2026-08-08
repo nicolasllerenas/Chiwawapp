@@ -3,6 +3,7 @@ import { db } from './db';
 
 const DEFAULT_BAG_ITEMS = [
   { label: 'Llaves (Perrito)', emoji: '🔑' },
+  { label: 'Billetera', emoji: '👛' },
   { label: 'Botella de agua', emoji: '💧' },
   { label: 'Tablet', emoji: '📱' },
   { label: 'Zanahoria (lápiz de la tablet)', emoji: '🥕' },
@@ -19,12 +20,13 @@ const DEFAULT_REWARDS: {
   emoji: string;
 }[] = [
   { title: 'Broster / antojito', category: 'comida', costPoints: 150, approxSoles: 20, emoji: '🍗' },
-  { title: 'Postre o snack especial', category: 'comida', costPoints: 100, approxSoles: 15, emoji: '🍰' },
-  { title: 'Volt a algún lado', category: 'salidas', costPoints: 200, approxSoles: 18, emoji: '🚗' },
-  { title: 'Cine o salida ligera', category: 'salidas', costPoints: 350, approxSoles: 35, emoji: '🎬' },
+  { title: 'Algo dulce porque sí', category: 'comida', costPoints: 100, approxSoles: 15, emoji: '🍰' },
+  { title: 'Volt bien helada', category: 'comida', costPoints: 70, approxSoles: 7, emoji: '⚡' },
+  { title: 'Jironear un rato', category: 'salidas', costPoints: 120, approxSoles: 10, emoji: '🚶‍♀️' },
+  { title: 'Cine', category: 'salidas', costPoints: 350, approxSoles: 35, emoji: '🎬' },
   { title: 'Maquillaje en Aruma', category: 'maquillaje', costPoints: 650, approxSoles: 70, emoji: '💄' },
   { title: 'Prenda en Gamarra', category: 'ropa', costPoints: 600, approxSoles: 60, emoji: '👗' },
-  { title: 'Día especial de shopping', category: 'otro', costPoints: 1500, approxSoles: 180, emoji: '🛍️' },
+  { title: 'Día de shopping, los dos', category: 'otro', costPoints: 1500, approxSoles: 180, emoji: '🛍️' },
 ];
 
 export async function seedIfNeeded() {

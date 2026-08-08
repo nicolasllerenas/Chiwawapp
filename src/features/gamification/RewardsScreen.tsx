@@ -6,6 +6,7 @@ import { Card } from '../../shared/ui/Card';
 import { Modal } from '../../shared/ui/Modal';
 import { MascotAvatar } from '../mascot/components/MascotAvatar';
 import { PointsBadge } from './components/PointsBadge';
+import { DailyWheel } from './components/DailyWheel';
 import { RewardForm, type RewardFormValues } from './components/RewardForm';
 import { usePointsBalance } from './usePoints';
 import {
@@ -68,6 +69,8 @@ export function RewardsScreen() {
       </div>
 
       <PointsBadge size="lg" />
+
+      <DailyWheel />
 
       <div className="flex flex-col gap-2">
         {rewards.map((reward) => {
