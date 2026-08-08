@@ -61,7 +61,7 @@ export function TasksScreen() {
         </Button>
       </div>
 
-      <Section title="Hoy" emptyText="Nada pendiente hoy. Respira tranquila 💛">
+      <Section title="Hoy" emptyText="nada pendiente hoy, respira tranquila 💛">
         {today.map((t) => (
           <TaskItem key={t.id} task={t} doneToday={isTaskDoneToday(t, todayISO)} onEdit={() => openEdit(t)} />
         ))}

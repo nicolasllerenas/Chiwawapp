@@ -144,8 +144,8 @@ export function RewardsScreen() {
       <Modal open={!!celebrateTitle} onClose={() => setCelebrateTitle(null)}>
         <div className="flex flex-col items-center gap-3 text-center">
           <MascotAvatar mood="feliz" size={120} interactive />
-          <p className="text-lg font-extrabold text-ink">¡Canjeaste "{celebrateTitle}"!</p>
-          <p className="text-sm text-ink-soft">Avísale a tu enamorado para que lo cumpla 💌</p>
+          <p className="text-lg font-extrabold text-ink">canjeaste "{celebrateTitle}" 🎉</p>
+          <p className="text-sm text-ink-soft">mándale un mensaje a Pie, que ya sabe lo que sigue 💌</p>
           <Button onClick={() => setCelebrateTitle(null)} className="w-full">
             Genial
           </Button>

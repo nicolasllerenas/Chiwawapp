@@ -5,7 +5,7 @@ import { MascotAvatar } from './MascotAvatar';
 import { moodMessage } from '../messages';
 import { useMascot } from '../useMascot';
 
-const PET_MESSAGES = ['¡Eso, cariños! 🥹', '¡Guau guau! 🐾', 'Qué rico, más 💛', '¡Me encanta!'];
+const PET_MESSAGES = ['eso, cariños 🥹', 'guau guau 🐾', 'qué rico, más', 'me encanta esto', 'jeje otra vez'];
 
 export function MascotCard() {
   const { mood, streak, mascotName, userName, loading } = useMascot();

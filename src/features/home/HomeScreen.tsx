@@ -54,7 +54,7 @@ export function HomeScreen() {
             </p>
           ) : (
             <p className="text-sm text-ink-soft">
-              {todayTasks.length === 0 ? 'No tienes tareas para hoy.' : '¡Ya completaste todo hoy!'}
+              {todayTasks.length === 0 ? 'nada para hoy, tranqui' : 'ya hiciste todo hoy, en serio'}
             </p>
           )}
           <button
@@ -87,7 +87,7 @@ export function HomeScreen() {
           <span className="text-3xl">🎯</span>
           <div className="min-w-0 flex-1">
             <p className="font-extrabold text-ink">Sesión de Enfoque</p>
-            <p className="text-sm text-ink-soft">Un ratito de calma para concentrarte</p>
+            <p className="text-sm text-ink-soft">un ratito de calma, cuando quieras</p>
           </div>
           <span className="text-ink-faint">→</span>
         </Card>

@@ -105,7 +105,7 @@ export function SettingsScreen() {
       </Card>
 
       <p className="pb-1 text-center text-xs text-ink-faint">
-        Hecho con 💛 para ti · Desarrollado por Pie
+        esto te lo hizo Pie, con harta paciencia y todo su cariño 💛
       </p>
     </div>
   );

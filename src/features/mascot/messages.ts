@@ -10,26 +10,30 @@ function withName(text: string, name: string): string {
 
 const MOOD_MESSAGES: Record<MascotMood, string[]> = {
   feliz: [
-    '¡Guau! Hoy ya la estás rompiendo, {name} 🐾',
-    'Me encanta cuando jugamos a las tareas 🐶💛',
-    '¡Eso es! Un pasito más, campeona.',
-    'Orgulloso de ti, en serio, {name}.',
+    'ahí vas, {name}, sabía que podías 🐾',
+    'me pones re contento cuando haces esto, en serio',
+    'eso eso eso. sigue así porfa',
+    'orgulloso de ti, no tienes idea cuánto',
+    'jaja te está saliendo bien el día, ¿no? 💛',
   ],
   neutral: [
-    'Aquí estoy, contigo, sin apuro.',
-    'Cuando quieras empezamos algo chiquito 🐾',
-    'Todo bien, {name}. Vamos con calma hoy.',
-    'Tú decides el ritmo, yo te acompaño.',
+    'aquí ando, sin apurarte',
+    'cuando quieras arrancamos con algo chiquito, sin drama',
+    'todo tranqui por acá, {name}',
+    'tú marcas el ritmo, yo nomás te sigo',
+    'sin apuro. en serio, sin apuro',
   ],
   preocupado: [
-    '¿Elegimos algo pequeñito para empezar? Tú puedes, {name} 💛',
-    'No pasa nada si vas lento, solo no te olvides de mí ni de ti.',
-    '¿Un empujoncito? Estoy aquí para eso.',
+    '¿empezamos con algo bien chiquitito? tú puedes',
+    'no pasa nada si vas lento hoy, solo no te me pierdas',
+    '¿un empujoncito? para eso estoy aquí, {name}',
+    'oe, ¿aunque sea una cosita? la que sea',
   ],
   triste: [
-    'Te extrañé hoy, {name}... ¿mañana jugamos un rato? 💛',
-    'No importa, mañana es un día nuevo. Aquí sigo.',
-    'Un día flojo no borra todo lo demás que sí lograste.',
+    'te extrañé hoy, {name}... ¿mañana vemos algo juntos? 💛',
+    'tranqui, mañana empezamos de nuevo. yo sigo aquí',
+    'un día flojo no borra todo lo demás que sí hiciste, ¿ya?',
+    'no te voy a dejar de querer por un día malo, jamás',
   ],
 };
 
@@ -38,31 +42,34 @@ export function moodMessage(mood: MascotMood, name = 'Chiwawita'): string {
 }
 
 export const TASK_DONE_MESSAGES = [
-  '¡Listo! Chiwawapunto ganado 🐾',
-  'Uno menos, ¡vamos bien!',
-  '¡Así se hace!',
-  'Eso cuenta, y cuenta mucho.',
+  'listo, un chiwawapunto más para ti 🐾',
+  'uno menos, vamos bien',
+  'así se hace',
+  'eso cuenta, y cuenta harto',
+  'ya po, mira cómo avanzas',
 ];
 
 export const BIG_TASK_DONE_MESSAGES = [
-  '¡Guau, esa era grande! Estoy súper orgulloso 🐶',
-  '¡Lo lograste! Eso no era fácil.',
-  'Eso merece más que un aplauso 🎉',
+  'esa era grande y la hiciste igual, estoy que exploto de orgullo 🐶',
+  'lo lograste. esa no era fácil, lo sé',
+  'eso merece más que un aplauso, casi lloro',
+  'guau. en serio, guau',
 ];
 
 export const STREAK_MILESTONE_MESSAGES: Record<number, string> = {
-  3: '¡3 días seguidos! Ya somos equipo 🔥',
-  7: '¡Una semana entera! Impresionante 🔥',
-  14: '¡Dos semanas! No te vas a librar de mí ahora 🐾',
-  30: '¡Un mes! Esto ya es costumbre bonita 💛',
-  60: '¡60 días! Wow, de verdad wow.',
-  100: '¡100 días! Eres una máquina, y yo tu fan número uno 🐶',
+  3: '3 días seguidos, ya somos equipo 🔥',
+  7: 'una semana entera. impresionante, de verdad',
+  14: 'dos semanas. ya no te libras de mí 🐾',
+  30: 'un mes. esto ya es costumbre bonita 💛',
+  60: '60 días. wow, de verdad wow',
+  100: '100 días. eres una máquina y yo tu fan número uno 🐶',
 };
 
 const BAGCHECK_COMPLETE_MESSAGES_RAW = [
-  '¿Segura que tienes tus llaves, {name}? 🐶🔑',
-  '¡Todo listo! Ve con cuidado, te quiero.',
-  'Bolso completo. Ahora sí, a conquistar el día, {name}.',
+  '¿segura que tienes tus llaves, {name}? el otro Perrito también te espera 🔑',
+  'listo, ve con cuidado. te quiero',
+  'bolso completo. ahora sí, a conquistar el día',
+  'chequeado todo. ya puedes salir tranqui',
 ];
 
 export function bagcheckCompleteMessage(name = 'Chiwawita'): string {
@@ -70,8 +77,9 @@ export function bagcheckCompleteMessage(name = 'Chiwawita'): string {
 }
 
 const FOCUS_SESSION_DONE_MESSAGES_RAW = [
-  '¡Sesión de enfoque completa! Te acompañé todo el rato 🐾',
-  '¡Lo lograste, {name}! Un ratito de calma también cuenta.',
+  'sesión completa, te acompañé todo el rato 🐾',
+  'lo lograste, {name}. un ratito de calma también cuenta',
+  'ya está, puedes soltar el aire',
 ];
 
 export function focusSessionDoneMessage(name = 'Chiwawita'): string {

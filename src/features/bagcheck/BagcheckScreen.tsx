@@ -49,7 +49,7 @@ export function BagcheckScreen() {
           </span>
         </ProgressRing>
         <p className="text-sm text-ink-soft">
-          Marca cada cosa antes de salir. Cuando termines, te lo confirmo yo 🐶
+          marca lo que ya tienes antes de salir, yo te aviso cuando esté todo
         </p>
       </Card>
 
